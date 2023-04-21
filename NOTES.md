@@ -1,13 +1,17 @@
-
+## Notes, issues, and workarounds
 
 open issues:
+
+### Support for Sailfish OS 4.5+
+
+currently developed against SFOS 4.4.
 
 ### database tables are not automatically created.
 
    after running sync once, database exists. then do:
 
    ```
-   devel-su -p sqlite3 /home/nemo/.local/share/system/privileged//Notifications/githubNotifications.db
+   devel-su -p sqlite3 $HOME/.local/share/system/privileged//Notifications/githubNotifications.db
    ```
    ```
    CREATE TABLE IF NOT EXISTS notifications (identifier INTEGER UNIQUE PRIMARY KEY AUTOINCREMENT,accountId INTEGER, typeStr TEXT, fromStr TEXT, repoStr TEXT, avatarUrl TEXT, url TEXT, createdTime INTEGER);
@@ -37,21 +41,10 @@ open issues:
     github/application_name=ENCRYPTED_APPNAME==
     github/client_id=ENCRYPTED_CLIENTID==
     github/client_secret=ENCRYPTED_CLIENTSECRET==
+    ```
+Now you can add an account through the Settings application
 
 ### Lipstick:
 
 apparently, the dconf key `/desktop/lipstick-jolla-home/events/auto_sync_feeds` enables social feeds. See `/usr/share/lipstick-jolla-home-qt5/eventsview/EventFeedAccountManager.qml`
 
-try to.enable using this:
-
-```
-key='/desktop/lipstick-jolla-home/events_screen_widgets'
-default="['/usr/share/lipstick-jolla-home-qt5/eventsview/calendar/CalendarWidgetLoader.qml']"
-mine="['/usr/share/lipstick-jolla-home-qt5/eventsview/calendar/CalendarWidgetLoader.qml','/usr/share/lipsti
-ck/eventfeed/GithubFeedItem.qml']"
-dconf read $key > key$$.backup
-dconf write $key "$mine"
-echo any key to reset
-read dummy
-dconf write $key "$default"
-```
