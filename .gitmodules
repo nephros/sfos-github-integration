@@ -7,3 +7,6 @@
 [submodule "jolla-settings-accounts-extensions-github"]
 	path = jolla-settings-accounts-extensions-github
 	url = https://github.com/nephros/jolla-settings-accounts-extensions-github.git
+[submodule "eventsview-extensions-github"]
+	path = eventsview-extensions-github
+	url = https://github.com/nephros/eventsview-extensions-github.git
