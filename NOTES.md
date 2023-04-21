@@ -41,3 +41,17 @@ open issues:
 ### Lipstick:
 
 apparently, the dconf key `/desktop/lipstick-jolla-home/events/auto_sync_feeds` enables social feeds. See `/usr/share/lipstick-jolla-home-qt5/eventsview/EventFeedAccountManager.qml`
+
+try to.enable using this:
+
+```
+key='/desktop/lipstick-jolla-home/events_screen_widgets'
+default="['/usr/share/lipstick-jolla-home-qt5/eventsview/calendar/CalendarWidgetLoader.qml']"
+mine="['/usr/share/lipstick-jolla-home-qt5/eventsview/calendar/CalendarWidgetLoader.qml','/usr/share/lipsti
+ck/eventfeed/GithubFeedItem.qml']"
+dconf read $key > key$$.backup
+dconf write $key "$mine"
+echo any key to reset
+read dummy
+dconf write $key "$default"
+```
