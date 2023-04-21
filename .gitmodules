@@ -1,0 +1,6 @@
+[submodule "libsocialcache"]
+	path = libsocialcache
+	url = https://github.com/nephros/libsocialcache.git
+[submodule "buteo-sync-plugins-social"]
+	path = buteo-sync-plugins-social
+	url = https://github.com/nephros/buteo-sync-plugins-social.git
