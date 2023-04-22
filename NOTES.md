@@ -46,5 +46,8 @@ Now you can add an account through the Settings application
 
 ### Lipstick:
 
-apparently, the dconf key `/desktop/lipstick-jolla-home/events/auto_sync_feeds` enables social feeds. See `/usr/share/lipstick-jolla-home-qt5/eventsview/EventFeedAccountManager.qml`
+apparently, the dconf key `/desktop/lipstick-jolla-home/events/auto_sync_feeds`
+enables social feeds. See `/usr/share/lipstick-jolla-home-qt5/eventsview/EventFeedAccountManager.qml`
+
+This is not needed, notifications (eventfeeds) are displayed automatically if a post type buteo service is enabled.
 
