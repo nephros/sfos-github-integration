@@ -9,7 +9,7 @@ Current goal is to have Notifications integrated/shown in Events view
  - Alpha: Account creation via libsocialcache and buteo-sync-plugins-social
  - Alpha: downsync of notifications via msyncd and buteo-sync-plugins-social
  - WIP: display of notifications in Lipstick
- - ...
+ - Missing: interaction/opening of notifs
 
 ### Issues:
 
