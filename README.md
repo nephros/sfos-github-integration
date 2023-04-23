@@ -13,4 +13,4 @@ Current goal is to have Notifications integrated/shown in Events view
 
 ### Issues:
 
-See NOTES.md
+See https://github.com/nephros/sfos-github-integration/issues
